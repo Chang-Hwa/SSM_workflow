@@ -1,4 +1,4 @@
-# SSM_workflow
+# `SSM_workflow`
 
 The workflow is used for site-saturation mutagenesis (SSM) library preparation, designed to hugely decrease the time effort potential users put into when preparing SSM libraries.
 
@@ -13,6 +13,6 @@ Users need to prepare three items in advance:
 - Protein sequence
 - Gene sequence
 
-There are multiple ways to create SSM libraries. The workflow follows the method in ["Biocatalytic oxidative cross-coupling reactions for biaryl bond formation"](https://www.nature.com/articles/s41586-021-04365-7#Sec3).
+There are multiple ways to create SSM libraries. This workflow follows the method in ["Biocatalytic oxidative cross-coupling reactions for biaryl bond formation"](https://www.nature.com/articles/s41586-021-04365-7#Sec3).
 
 
