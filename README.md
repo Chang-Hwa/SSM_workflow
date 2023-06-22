@@ -1,13 +1,13 @@
 # SSM_workflow
 
-The workflow here is used for site-saturation mutagenesis (SSM) library preparation, designed to hugely decrease the time effort potential users put into when preparing SSM libraries.
+The workflow is used for site-saturation mutagenesis (SSM) library preparation, designed to hugely decrease the time effort potential users put into when preparing SSM libraries.
 
 The workflow enables:
 
 - Determination of *N* mutation sites for the SSM targeting activity enrichment for your protein of interest
 - Generation of *N* primer pairs ready for order
 
-Users need to have:
+Users need to prepare three items in advance:
 
 - Protein structure/model
 - Protein sequence
