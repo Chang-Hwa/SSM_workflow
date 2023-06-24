@@ -37,7 +37,7 @@ If you already know which sites to mutate (or want to include more sites) and co
 
 Here I will use TropB, which is a flavin-dependent monooxygenase, as an example to go through the whole SSM_workflow.
 
-In my design, users need to run cells in sequential order (pressing the play button from top to down). In this demo, I will specify issues that you might face or be aware of during the process. Several steps will require you to upload files and you need to basically upload files acquired from previous steps.
+In my design, users need to run cells in sequential order (pressing the play button from top to down). In this demo, I will specify issues that you might face or need to be aware of during the process. Several steps will require you to upload files acquired from previous steps.
 
 Step I:
 - "Install PyMol" may take minutes to complete and may report an error. You can ignore the error.
@@ -55,6 +55,18 @@ Step III:
 - The default alignment method is MAFFT. Muscle3 is an alternative method suitable for less sequences and will generally take longer to run.
 
 Step IV:
+
+![Step4](docs/step4_residue_conservation.png)
+
+- In step IV, the conservation of each site of your query sequence will be calculated and you will also get four percentiles (5th, 10th, 90th, and 95th) to have references to define thresholds to include or exclude mutation sites.
+
+Step V:
+
+![Step5](docs/step5_mutation_sites.png)
+
+- In step V, you will be required to upload two files ("output3_res_conservation.csv" and structure/model file in pdb) and need to specify multiple parameters, including mutation numbers, max distance (Å) around the active site, and lower/upper conservation threshold to include/exclude mutation sites.
+- We provide two options to define the active site. You can either define the active site based on the ligand/substrate/cofactor or residue(s) known to be critical and conserved around the active site.
+- In the demo, TropB is a dimer and we use the chain B and the bound substrate "KJY" to define its active site.
 
 
 
