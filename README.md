@@ -15,4 +15,4 @@ Users need to prepare three items in advance:
 
 There are multiple ways to create SSM libraries. This workflow follows the method in ["Biocatalytic oxidative cross-coupling reactions for biaryl bond formation"](https://www.nature.com/articles/s41586-021-04365-7#Sec3).
 
-[Running `SSM_workflow` in Google Colab](https://colab.research.google.com/drive/18t9rrZLZhyHS6bMF6W_p84CwKFEJeD9x?usp=sharing)
+[Running `SSM_workflow` in Google Colab](https://colab.research.google.com/drive/1EpV37cbThBZ0HcOOblgUYhhWPXHYe2YD?usp=sharing)
