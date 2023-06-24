@@ -49,6 +49,9 @@ Step II:
 - You can run Blastp directly on Colab if you target no more than 3000 homologous sequences. If you want to include more distantly homologous sequences (≥ 3000), it is recommended to do so directly on the NCBI website and download the unaligned blast file in fasta format.
 
 Step III:
+
+![Step3](docs/step3_MSA.png)
+
 - The default alignment method is MAFFT. Muscle3 is an alternative method suitable for less sequences and will generally take longer to run.
 
 Step IV:
