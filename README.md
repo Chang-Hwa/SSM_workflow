@@ -43,6 +43,9 @@ Step I:
 - "Install PyMol" may take minutes to complete and may report an error. You can ignore the error.
 
 Step II:
+
+![Step2](docs/step2_homology_search.png)
+
 - You can run Blastp directly on Colab if you target no more than 3000 homologous sequences. If you want to include more distantly homologous sequences (≥ 3000), it is recommended to do so directly on the NCBI website and download the unaligned blast file in fasta format.
 
 Step III:
