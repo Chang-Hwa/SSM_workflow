@@ -64,9 +64,14 @@ Step V:
 
 ![Step5](docs/step5_mutation_sites.png)
 
-- In step V, you will be required to upload two files ("output3_res_conservation.csv" and structure/model file in pdb) and to specify multiple parameters, including mutation numbers, max distance (Å) around the active site, and lower/upper conservation threshold to include/exclude mutation sites.
+- In step V, you will be required to upload two files ("output3_res_conservation.csv" and structure/model file in pdb) and to specify mutation numbers, max distance (Å) around the active site, and lower/upper conservation threshold to include/exclude mutation sites.
 - We provide two options to define the active site. You can either define the active site based on the ligand/substrate/cofactor or residue(s) known to be critical and conserved around the active site.
-- In the demo, the crystal strucutre of the substrate-bound TropB is a dimer and we use the chain B and the bound substrate "KJY" to define its active site.
+- In the demo, the crystal structure of the substrate-bound TropB is a dimer and we use the chain B and the bound substrate "KJY" to define TropB's active site.
+- When you first run step V, a box will pop out to ask if you allow to download multiple files. Please select yes.
+
+Step VI.
+
+
 
 
 
