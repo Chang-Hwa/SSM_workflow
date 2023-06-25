@@ -15,7 +15,7 @@ Users need to prepare three items in advance:
 - Protein sequence
 - Gene sequence
 
-There are multiple ways to create SSM libraries. This workflow follows the method in ["Biocatalytic oxidative cross-coupling reactions for biaryl bond formation"](https://www.nature.com/articles/s41586-021-04365-7#Sec3) and was primarily designed for it. Our SSM method works reasonably fine and robustly. If you are using your own in-house method to create SSM libraries, the workflow might not accomodate it. However, you are still welcome to modify the codes to fit you own needs.
+There are multiple ways to create SSM libraries. This workflow follows the method in ["Biocatalytic oxidative cross-coupling reactions for biaryl bond formation"](https://www.nature.com/articles/s41586-021-04365-7#Sec3) and was primarily designed for it. Our SSM method works reasonably fine and robustly. If you are using your own in-house method to create SSM libraries, the workflow might not accommodate it. However, you are still welcome to modify the codes to fit you own needs.
 
 [Running `SSM_workflow` in Google Colab](https://colab.research.google.com/drive/1EpV37cbThBZ0HcOOblgUYhhWPXHYe2YD?usp=sharing)
 
@@ -37,7 +37,7 @@ If you already know which sites to mutate (or want to include more sites) and co
 
 Here I will use TropB, which is a flavin-dependent monooxygenase, as an example to go through the whole SSM_workflow.
 
-In my design, users need to run cells in sequential order (pressing the play button from top to down). In this demo, I will specify issues that you might face or need to be aware of during the process. Several steps will require you to upload files acquired from previous steps. However, uploading files is incorporated to avoid users from starting from the beginning if you workflow is interrupted for somehow reasons. If you run the whole workflow consecutively and once you have uploaded files or have gotten files passed from the previous steps, you don't need to upload the files again theoretically.
+In my design, users need to run cells in sequential order (pressing the play button from top to down). In this demo, I will specify issues that you might face or need to be aware of during the process. Several steps will require you to upload files acquired from previous steps. However, uploading files is incorporated to avoid users from starting from the beginning everytime if your run is interrupted for somehow reasons. If you run the whole workflow consecutively and once you have uploaded files or have gotten files passed from the previous steps, you don't need to upload the files again theoretically.
 
 *Step I:*
 - "Install PyMol" may take minutes to complete and may report an error. You can ignore the error.
@@ -46,13 +46,14 @@ In my design, users need to run cells in sequential order (pressing the play but
 
 ![Step2](docs/step2_homology_search.png)
 
-- You can run Blastp directly on Colab if you target no more than 3000 homologous sequences. If you want to include more distantly homologous sequences (≥ 3000), it is recommended to do so directly on the NCBI website and download the unaligned blast file in fasta format.
+- You can run Blastp directly on Colab if you target no more than 3000 homologous sequences. If you want to include more distantly homologous sequences (≥ 3000), it is recommended to do so directly on the NCBI website and download an unaligned blast file in fasta format.
+- If you don't like to use Blastp, you can choose other blast functions in the NCBI website such as PSI-BLAST and again download the unaligned blast file in fasta format.
 
 *Step III:*
 
 ![Step3](docs/step3_MSA.png)
 
-- The default alignment method is MAFFT. Muscle3 is an alternative method suitable for less sequences and will generally take longer to run.
+- The default alignment method is MAFFT. Muscle3 is an alternative suitable for aligning less sequences and will generally take longer to run.
 
 *Step IV:*
 
@@ -64,23 +65,23 @@ In my design, users need to run cells in sequential order (pressing the play but
 
 ![Step5](docs/step5_mutation_sites.png)
 
-- In step V, you will be required to upload two files ("output3_res_conservation.csv" and structure/model file in pdb) and to specify mutation numbers, max distance (Å) around the active site, and lower/upper conservation threshold to include/exclude mutation sites.
+- In step V, you will be required to upload two files ("output3_res_conservation.csv" and structure/model file in pdb) and to specify mutation numbers, max distance (Å) around an active site, and lower/upper conservation threshold to include/exclude mutation sites.
 - We provide two options to define the active site. You can either define the active site based on the ligand/substrate/cofactor or residue(s) known to be critical and conserved around the active site.
-- In the demo, the crystal structure of the substrate-bound TropB is a dimer and we use the chain B and the bound substrate "KJY" to define TropB's active site.
+- In the demo, the crystal structure of the substrate-bound TropB is a dimer and we use the chain "B" and the bound substrate "KJY" to define TropB's active site.
 - When you first run step V, a box will pop out to ask if you allow to download multiple files. Please select yes.
 
 *Step VI:*
 
 ![Step6](docs/step6_primer.png)
 
-- In step VI, you will get an interactive table including all mutation sites, you can glean through it to check if there is any abnormal primer desgin.
+- In step VI, you will get an interactive table including all mutation sites, you can glean through it to check if there is any abnormal primer.
 
 *Step VII:*
 
 ![Step7](docs/step7_pymol.png)
 
 - You will get a figure in png with mutation sites labelled in purple and the center of the active site labelled in yellow.
-- A pse file is created at the same time so you can open it in PyMol.
+- A pse file is also created at the same time so you can open it in PyMol.
 
 
 
