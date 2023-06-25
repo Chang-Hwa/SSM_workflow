@@ -39,29 +39,29 @@ Here I will use TropB, which is a flavin-dependent monooxygenase, as an example 
 
 In my design, users need to run cells in sequential order (pressing the play button from top to down). In this demo, I will specify issues that you might face or need to be aware of during the process. Several steps will require you to upload files acquired from previous steps. However, uploading files is incorporated to avoid users from starting from the beginning everytime if your run is interrupted for somehow reasons. If you run the whole workflow consecutively and once you have uploaded files or have gotten files passed from the previous steps, you don't need to upload the files again theoretically.
 
-*Step I:*
+***Step I:***
 - "Install PyMol" may take minutes to complete and may report an error. You can ignore the error.
 
-*Step II:*
+***Step II:***
 
 ![Step2](docs/step2_homology_search.png)
 
 - You can run Blastp directly on Colab if you target no more than 3000 homologous sequences. If you want to include more distantly homologous sequences (≥ 3000), it is recommended to do so directly on the NCBI website and download an unaligned blast file in fasta format.
 - If you don't like to use Blastp, you can choose other blast functions in the NCBI website such as PSI-BLAST and again download the unaligned blast file in fasta format.
 
-*Step III:*
+***Step III:***
 
 ![Step3](docs/step3_MSA.png)
 
 - The default alignment method is MAFFT. Muscle3 is an alternative suitable for aligning less sequences and will generally take longer to run.
 
-*Step IV:*
+***Step IV:***
 
 ![Step4](docs/step4_residue_conservation.png)
 
 - In step IV, the conservation of each site of your query sequence will be calculated and you will also get four percentiles (5th, 10th, 90th, and 95th) to have references to define thresholds to include or exclude mutation sites.
 
-*Step V:*
+***Step V:***
 
 ![Step5](docs/step5_mutation_sites.png)
 
@@ -70,21 +70,25 @@ In my design, users need to run cells in sequential order (pressing the play but
 - In the demo, the crystal structure of the substrate-bound TropB is a dimer and we use the chain "B" and the bound substrate "KJY" to define TropB's active site.
 - When you first run step V, a box will pop out to ask if you allow to download multiple files. Please select yes.
 
-*Step VI:*
+***Step VI:***
 
 ![Step6](docs/step6_primer.png)
 
 - In step VI, you will get an interactive table including all mutation sites, you can glean through it to check if there is any abnormal primer.
 
-*Step VII:*
+***Step VII:***
 
 ![Step7](docs/step7_pymol.png)
 
 - You will get a figure in png with mutation sites labelled in purple and the center of the active site labelled in yellow.
-- A pse file is also created at the same time so you can open it in PyMol.
+- A pse file is also created at the same time so you can open it in PyMOL.
 
+## References:
 
-
+1. [PyMOL in Colab](https://github.com/MooersLab/colabpymolpysnips/tree/main)
+2. *Proc. Natl. Acad. Sci. U.S.A.* **1998**, 95, 1460—1465. DOI: 10.1073/pnas.95.4.1460
+3. *Biopolymers* **1965**, 3(2), 195−208. DOI: 10.1002/bip.360030207
+4. *Biochemistry* **2004**, 43(12), 3537–3554. DOI: 10.1021/bi034621r
 
 
 
