@@ -31,36 +31,36 @@ The **SSM_workflow streamlines and automates steps for preparing a SSM library**
 5. Primer generation for all mutation sites in SSM
 6. Mutation site visualization in PyMol
 
-If you already know which sites to mutate (or want to include more sites) and come with their residue numbers, we also provide an option to skip the entire workflow and only run a [single cell](https://colab.research.google.com/drive/1EpV37cbThBZ0HcOOblgUYhhWPXHYe2YD#scrollTo=-NNC0eIXvLEY&line=5&uniqifier=1) in Colab.
+If you already know which sites to mutate (or want to include more sites) and come with their residue numbers, **we also provide an option to skip the entire workflow and only run a [single cell](https://colab.research.google.com/drive/1EpV37cbThBZ0HcOOblgUYhhWPXHYe2YD#scrollTo=-NNC0eIXvLEY&line=5&uniqifier=1) in Colab.**
 
 ## Demo:
 
 Here I will use TropB, which is a flavin-dependent monooxygenase, as an example to go through the whole SSM_workflow.
 
-In my design, users need to run cells in sequential order (pressing the play button from top to down). In this demo, I will specify issues that you might face or need to be aware of during the process. Several steps will require you to upload files acquired from previous steps.
+In my design, users need to run cells in sequential order (pressing the play button from top to down). In this demo, I will specify issues that you might face or need to be aware of during the process. Several steps will require you to upload files acquired from previous steps. However, uploading files is incorporated to avoid users from starting from the beginning if you workflow is interrupted for somehow reasons. If you run the whole workflow consecutively and once you have uploaded files or have gotten files passed from the previous steps, you don't need to upload the files again theoretically.
 
-Step I:
+*Step I:*
 - "Install PyMol" may take minutes to complete and may report an error. You can ignore the error.
 
-Step II:
+*Step II:*
 
 ![Step2](docs/step2_homology_search.png)
 
 - You can run Blastp directly on Colab if you target no more than 3000 homologous sequences. If you want to include more distantly homologous sequences (≥ 3000), it is recommended to do so directly on the NCBI website and download the unaligned blast file in fasta format.
 
-Step III:
+*Step III:*
 
 ![Step3](docs/step3_MSA.png)
 
 - The default alignment method is MAFFT. Muscle3 is an alternative method suitable for less sequences and will generally take longer to run.
 
-Step IV:
+*Step IV:*
 
 ![Step4](docs/step4_residue_conservation.png)
 
 - In step IV, the conservation of each site of your query sequence will be calculated and you will also get four percentiles (5th, 10th, 90th, and 95th) to have references to define thresholds to include or exclude mutation sites.
 
-Step V:
+*Step V:*
 
 ![Step5](docs/step5_mutation_sites.png)
 
@@ -69,7 +69,18 @@ Step V:
 - In the demo, the crystal structure of the substrate-bound TropB is a dimer and we use the chain B and the bound substrate "KJY" to define TropB's active site.
 - When you first run step V, a box will pop out to ask if you allow to download multiple files. Please select yes.
 
-Step VI.
+*Step VI:*
+
+![Step6](docs/step6_primer.png)
+
+- In step VI, you will get an interactive table including all mutation sites, you can glean through it to check if there is any abnormal primer desgin.
+
+*Step VII:*
+
+![Step7](docs/step7_pymol.png)
+
+- You will get a figure in png with mutation sites labelled in purple and the center of the active site labelled in yellow.
+- A pse file is created at the same time so you can open it in PyMol.
 
 
 
