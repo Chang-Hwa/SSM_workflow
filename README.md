@@ -37,7 +37,7 @@ If you already know which sites to mutate (or want to include more sites) and co
 
 **Multi-SDM primer generator:**
 
-We provide another primer generator designed for [Multi-SDM](https://colab.research.google.com/drive/1EpV37cbThBZ0HcOOblgUYhhWPXHYe2YD#scrollTo=ou2VFUVHODzg&line=3&uniqifier=1).
+We provide another primer generator designed for **[Multi-SDM](https://colab.research.google.com/drive/1EpV37cbThBZ0HcOOblgUYhhWPXHYe2YD#scrollTo=ou2VFUVHODzg&line=3&uniqifier=1)**.
 
 ## Demo:
 
