@@ -31,7 +31,13 @@ The **SSM_workflow streamlines and automates steps for preparing a SSM library**
 5. Primer generation for all mutation sites in SSM
 6. Mutation site visualization in PyMol
 
+**Run the SSM primer generator separately from the workflow:**
+
 If you already know which sites to mutate (or want to include more sites) and come with their residue numbers, **we also provide an option to skip the entire workflow and only run a [single cell](https://colab.research.google.com/drive/1EpV37cbThBZ0HcOOblgUYhhWPXHYe2YD#scrollTo=-NNC0eIXvLEY&line=5&uniqifier=1) in Colab.**
+
+**Multi-SDM primer generator:**
+
+We provide another primer generator designed for [Multi-SDM](https://colab.research.google.com/drive/1EpV37cbThBZ0HcOOblgUYhhWPXHYe2YD#scrollTo=ou2VFUVHODzg&line=3&uniqifier=1).
 
 ## Demo:
 
